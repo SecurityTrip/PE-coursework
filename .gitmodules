@@ -4,5 +4,5 @@
 
 
 [submodule "PE_frontend"]
-	path = PE_frontend
+	path = pe_frontend
 	url = https://github.com/SecurityTrip/PE_frontend.git
