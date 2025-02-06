@@ -1,0 +1,8 @@
+[submodule "PE_backend"]
+	path = PE_backend
+	url = https://github.com/SecurityTrip/PE_backend.git
+
+
+[submodule "PE_frontend"]
+	path = PE_frontend
+	url = https://github.com/SecurityTrip/PE_frontend.git
