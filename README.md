@@ -3,7 +3,7 @@
 Участиники:
 * [SecurityTrip](https://github.com/SecurityTrip)
 * [F4NTOM41K](https://github.com/F4NTOM41K)
-* 
+* [Withotic](https://github.com/Withotic)
 
 ## Зависмости
 ### Зависмости для запуска
