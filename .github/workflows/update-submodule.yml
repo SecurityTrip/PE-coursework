@@ -23,7 +23,7 @@ jobs:
 
       - name: Update submodule to latest master
         run: |
-          git submodule update --remote --merge
+          git submodule update --remote --rebase
           git add .
           git commit -m "chore: update submodule to latest master" || echo "No changes to commit"
 
