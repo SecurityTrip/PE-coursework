@@ -2,7 +2,7 @@ name: Update Submodule to Latest Master
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Каждый день в 6:00 утра UTC
+    - cron: '0 * * * *'  # Каждый час
   workflow_dispatch:      # Возможность вручную запустить
 
 jobs:
