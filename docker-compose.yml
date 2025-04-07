@@ -12,44 +12,36 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: pgadmin
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@example.com
-      - PGADMIN_DEFAULT_PASSWORD=admin
-    ports:
-      - "5050:80"
-    depends_on:
-      - postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d courseworkDB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   backend:
     build:
-      context: ./backend
-      # Если Dockerfile имеет другое имя, например Dockerfile.prod, можно указать:
-      # dockerfile: Dockerfile.prod
+      context: ./PE_backend
     container_name: backend
     environment:
-      - DATABASE_HOST=postgres
-      - DATABASE_USER=admin
-      - DATABASE_PASSWORD=admin
-      - DATABASE_NAME=mydatabase
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/courseworkDB
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
     ports:
-      - "8000:8000"
+      - "8080:8080"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
   frontend:
     build:
-      context: ./frontend
-      # Аналогично, если Dockerfile имеет отличное имя:
-      # dockerfile: Dockerfile.prod
+      context: ./pe_frontend
     container_name: frontend
     ports:
       - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8080/api
 
 volumes:
   pgdata:
