@@ -1,6 +1,6 @@
-[submodule "PE_backend"]
+[submodule "Backend"]
 	path = PE_backend
-	url = https://github.com/SecurityTrip/PE_backend.git
+	url = https://github.com/SecurityTrip/SeaBackend.git
 	branch = master
 
 
