@@ -37,7 +37,7 @@ services:
       context: ./pe_frontend
     container_name: frontend
     ports:
-      - "3000:3000"
+      - "80:80"
     depends_on:
       - backend
     environment:
