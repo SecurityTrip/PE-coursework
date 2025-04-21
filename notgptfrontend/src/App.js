@@ -20,6 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Auth />} />
                     <Route path="/regis" element={<Regis />} />
+                    <Route path="/singleplayer" element={<Singleplayer />} />
                 </Routes>
             </div>
         </Router>
@@ -27,10 +28,9 @@ function App() {
 }
 
 function Auth() {
-    const navigate = useNavigate(); // Теперь хук используется внутри компонента, который внутри Router
-
+    const navigate = useNavigate();
     function handleClick() {
-        navigate('/menu'); // Навигация на другую страницу
+        navigate('/singleplayer'); // Навигация на другую страницу
     }
 
     return (
@@ -48,14 +48,12 @@ function Auth() {
         </header>
     );
 }
-
 function Regis() {
     const navigate = useNavigate();
-
     const [selavx, setSelavx] = useState(-3.5);
     const [selavy, setSelavy] = useState(5.5);
     function handleClick() {
-        navigate('/menu'); // Навигация на другую страницу
+        navigate('/singleplayer'); // Навигация на другую страницу
     }
     
     return (
@@ -96,6 +94,19 @@ function Avatimbut({ y, x, img,onClick }) {
 function SelectedAva({y,x }) {
     return (
         <div className="selectedAva" style={{ top: y + 'vh', left: 'calc(50% + ' + x + 'vh' }} ></div>
+    );
+}
+
+function Singleplayer() {
+    const navigate = useNavigate();
+    return (
+        <header className="App-header">
+            <div className="bckgr"></div>
+            <img className="logolabel" src={logolabelimg} alt="Logo" />
+            <img className="logoimg" src={logoimgimg} alt="Logo" />
+            <div className="logintabdark">еще не готово((
+            </div>
+        </header>
     );
 }
 
