@@ -68,48 +68,89 @@
     z-index: 2;
 }
 
+/*----------------------*/
 .logintab {
+    position: absolute;
+    top: 50vh;
+    left: calc(50% + 0vh);
+    width: 45vh;
+    height: 31vh;
+    transform: translate(-50%, -50%);
     background-color: #FFD1BB;
-    border-radius: 50px;
-    padding-top: 10px;
+    color: black;
+    border-radius: 5vh;
     box-shadow: 0px 10px 10px 0px rgb(0,0,0,0.3);
-}
-
-.logintabdark {
-    background-color: rgb(0,0,0,0.69);
-    border-radius: 50px;
-    margin-top: 10px;
-    padding: 15px 20px;
-}
-
-input {
-    width: 100%;
-    padding: 15px 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 50px;
-    box-sizing: border-box;
-    box-shadow: inset 0px -10px 10px 0px rgb(0,0,0,0.3);
-    font-size: 70%;
+    font-size: 5vh;
     font-weight: bold;
 }
 
+.logintabdark {
+    position: absolute;
+    top: 54vh;
+    left: calc(50% + 0vh);
+    width: 45vh;
+    height: 23vh;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0,0,0,0.69);
+    border-radius: 5vh;
+}
 
-button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.loginputlog {
+    position: absolute;
+    top: 5vh;
+    left: calc(50% - 0vh);
+    width: 40vh;
+    height: 5vh;
+    padding: 0 2vh;
+    transform: translate(-50%, -50%);
     border: none;
-    border-radius: 50px;
+    border-radius: 2.5vh;
+    box-sizing: border-box;
     box-shadow: inset 0px -10px 10px 0px rgb(0,0,0,0.3);
-    font-size: 70%;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.loginputpass {
+    position: absolute;
+    top: 11.5vh;
+    left: calc(50% - 0vh);
+    width: 40vh;
+    height: 5vh;
+    padding: 0 2vh;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 2.5vh;
+    box-sizing: border-box;
+    box-shadow: inset 0px -10px 10px 0px rgb(0,0,0,0.3);
+    font-size: 2vh;
+    font-weight: bold;
+}
+.logbutton {
+    position: absolute;
+    top: 18vh;
+    left: calc(50% - 0vh);
+    width: 40vh;
+    height: 5vh;
+    padding: 0 2vh;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 2.5vh;
+    box-shadow: inset 0px -10px 10px 0px rgb(0,0,0,0.3);
+    font-size: 2vh;
     font-weight: bold;
     color: rgb(255,255,255);
     background-color: #39AB43;
 }
-
+.linkToReg {
+    position: absolute;
+    top: 75vh;
+    left: calc(50% + 0vh);
+    transform: translate(-50%, -50%);
+    width: 100vh;
+    height: 10vh;
+    font-size: 3vh;
+}
+/*----------------------------------*/
 .regtab {
     position: absolute;
     top: 50vh;
@@ -131,10 +172,10 @@ button {
     width: 100vh;
     height: 29.5vh;
     transform: translate(-50%, -50%);
-    background-color: rgb(0,0,0,0.69);
     border-radius: 5vh;
     font-size: 5vh;
     font-weight: bold;
+    background-color: rgb(0,0,0,0.69);
 }
 
 .reginputlog {
@@ -143,9 +184,7 @@ button {
     left: calc(50% - 47.5vh);
     width: 40vh;
     height: 5vh;
-    padding: 0px 2vh;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 0 2vh;
     transform: translate(0, -50%);
     border: none;
     border-radius: 2.5vh;
@@ -161,9 +200,7 @@ button {
     left: calc(50% - 47.5vh);
     width: 40vh;
     height: 5vh;
-    padding: 0px 2vh;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 0 2vh;
     transform: translate(0, -50%);
     border: none;
     border-radius: 2.5vh;
@@ -179,9 +216,7 @@ button {
     left: calc(50% - 47.5vh);
     width: 40vh;
     height: 5vh;
-    padding: 0px 2vh;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 0 2vh;
     transform: translate(0, -50%);
     border: none;
     border-radius: 2.5vh;
@@ -223,6 +258,7 @@ button {
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 2.5vh;
+    border:none;
 }
 .selectedAva {
     position: absolute;

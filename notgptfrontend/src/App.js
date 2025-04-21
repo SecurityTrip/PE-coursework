@@ -38,27 +38,13 @@ function Auth() {
             <div className="bckgr"></div>
             <img className="logolabel" src={logolabelimg} alt="Logo" />
             <img className="logoimg" src={logoimgimg} alt="Logo" />
-            <div className="logintab">
-                <div
-                    style={{
-                        fontSize: '170%',
-                        fontWeight: 'bold',
-                        color: 'rgb(0,0,0)',
-                        marginLeft: '30px',
-                        marginRight: '30px',
-                    }}
-                >
-                    Авторизация
-                </div>
-                <div className="logintabdark">
-                    <input type="text" placeholder="Логин"/>
-                    <br />
-                    <input type="text" placeholder="Пароль" />
-                    <br />
-                    <button onClick={handleClick}>Войти</button>
-                </div>
+            <div className="logintab">Авторизация</div>
+            <div className="logintabdark">
+                <input type="text" placeholder="Логин" className="loginputlog" />
+                <input type="text" placeholder="Пароль" className="loginputpass" />
+                <button onClick={handleClick} className="logbutton">Войти</button>
             </div>
-            <Link to="/regis">Зарегистрироваться</Link>
+            <Link to="/regis" className="linkToReg">Зарегистрироваться</Link>
         </header>
     );
 }
@@ -79,10 +65,11 @@ function Regis() {
             <img className="logolabel" src={logolabelimg} alt="Logo" />
             <img className="logoimg" src={logoimgimg} alt="Logo" />
             <div className="regtab">Регистрация</div>
-            <div className="regtabdark"><input type="text" placeholder="Логин" class="reginputlog" />
-                <input type="text" placeholder="Пароль" class="reginputpass" />
-                <input type="text" placeholder="Повторите пароль" class="reginputpasspass" />
-                <button onClick={handleClick} class="regbutton">Зарегистрироваться</button>
+            <div className="regtabdark">
+                <input type="text" placeholder="Логин" className="reginputlog" />
+                <input type="text" placeholder="Пароль" className="reginputpass" />
+                <input type="text" placeholder="Повторите пароль" className="reginputpasspass" />
+                <button onClick={handleClick} className="regbutton">Зарегистрироваться</button>
                 <div className="avatarLabel">Выберите аватар:</div>
                 <SelectedAva x={selavx} y={selavy}></SelectedAva>
                 <Avatimbut y='7' x='-2' img={avaimg0} onClick={() => { setSelavx(-3.5); setSelavy(5.5); }} />
