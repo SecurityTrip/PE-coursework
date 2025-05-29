@@ -2,22 +2,22 @@ version: '3.8'
 name: Sea Battle
 
 services:
-  postgres:
-    image: postgres:latest
-    container_name: postgres
-    environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=courseworkDB
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d courseworkDB"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+#  postgres:
+#    image: postgres:latest
+#    container_name: postgres
+#    environment:
+#      - POSTGRES_USER=admin
+#      - POSTGRES_PASSWORD=admin
+#      - POSTGRES_DB=courseworkDB
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data
+#    ports:
+#      - "5432:5432"
+#    healthcheck:
+#      test: ["CMD-SHELL", "pg_isready -U admin -d courseworkDB"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
 
   backend:
     build:
@@ -25,9 +25,9 @@ services:
     container_name: backend
     environment:
       - SPRING_PROFILES_ACTIVE=local
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/courseworkDB
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://192.168.0.5:5432/courseworkDB
+      - SPRING_DATASOURCE_USERNAME=gen_user
+      - SPRING_DATASOURCE_PASSWORD=K!*-I870YQpj2=
     ports:
       - "8080:443"
     depends_on:
@@ -45,5 +45,5 @@ services:
     environment:
       - NEXT_PUBLIC_API_URL=http://backend:8080/api
 
-volumes:
-  pgdata:
+#volumes:
+#  pgdata:
