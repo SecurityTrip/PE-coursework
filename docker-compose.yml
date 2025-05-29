@@ -34,12 +34,23 @@ services:
       postgres:
         condition: service_healthy
 
-  frontend:
+  frontend-1:
     build:
       context: ./pe_frontend
     container_name: frontend
     ports:
       - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8080/api
+
+  frontend-2:
+    build:
+      context: ./pe_frontend
+    container_name: frontend
+    ports:
+      - "81:80"
     depends_on:
       - backend
     environment:
