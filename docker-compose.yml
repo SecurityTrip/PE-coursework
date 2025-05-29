@@ -29,7 +29,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=admin
       - SPRING_DATASOURCE_PASSWORD=admin
     ports:
-      - "8080:80"
+      - "8080:443"
     depends_on:
       postgres:
         condition: service_healthy
