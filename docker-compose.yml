@@ -48,7 +48,7 @@ services:
   frontend-2:
     build:
       context: ./pe_frontend
-    container_name: frontend
+    container_name: frontendd
     ports:
       - "81:80"
     depends_on:
