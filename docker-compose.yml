@@ -30,9 +30,9 @@ services:
       - SPRING_DATASOURCE_PASSWORD=K!*-I870YQpj2=
     ports:
       - "8080:443"
-    depends_on:
-      postgres:
-        condition: service_healthy
+#    depends_on:
+#      postgres:
+#        condition: service_healthy
 
   frontend:
     build:
