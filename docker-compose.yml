@@ -39,7 +39,7 @@ services:
       context: ./pe_frontend
     container_name: frontend1
     ports:
-      - "80:80"
+      - "8081:80"
     depends_on:
       - backend
     environment:
@@ -50,7 +50,7 @@ services:
       context: ./pe_frontend
     container_name: frontend2
     ports:
-      - "81:80"
+      - "8082:80"
     depends_on:
       - backend
     environment:
